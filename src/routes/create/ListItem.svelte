@@ -36,13 +36,15 @@
 	}
 	.bin {
 		font-family: 'Bebas Neue', sans-serif;
-		color: goldenrod;
+		color: whitesmoke;
 		background: none;
 		font-size: 2rem;
+		/* Stops button nudging out the list slightly on focus */
+		padding: 0px;
 		transition: color 200ms;
 	}
 	.bin:hover, .bin:focus {
-		color: whitesmoke;
+		color: crimson;
 	}
 </style>
 
