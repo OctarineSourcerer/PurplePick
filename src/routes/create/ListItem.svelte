@@ -22,10 +22,8 @@
 </script>
 
 <style lang="scss">
-	@import "../theme.scss";
-
 	div {
-		color: $theme-font-primary;
+		color: $theme-primary;
 		font-family: $theme-item-font;
 		font-size: 2rem;
 	}
@@ -38,15 +36,17 @@
 	}
 	.bin {
 		font-family: $theme-item-font;
-		color: $theme-font-can-activate;
+		color: $theme-can-activate;
 		background: none;
 		font-size: 2rem;
 		/* Stops button nudging out the list slightly on focus */
 		padding: 0px;
 		transition: color 200ms;
 		
-		:hover, :focus {
-			color: $theme-font-deletes;
+		&:hover {
+			color: $theme-deletes;
+			// Should probably add an indicator for focus
+			// If I use the same here, you can actually have your mouse off the thing and it still shows red. You can even have two at the same time
 		}
 	}
 </style>
@@ -57,7 +57,7 @@
 	on:mouseleave={hideControls} class="flex-container">
 	{name}
 	{#if controls}
-		<!-- Button is likely to be more applicable here, also for accessibility purposes -->
+		<!-- Might be better to simply visible:false the element? Makes it easier to selenium etc, thats' for sure -->
 		<button class="item bin" on:click={bin}>bin</button>
 	{/if}
 </div>
