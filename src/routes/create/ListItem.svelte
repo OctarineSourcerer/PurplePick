@@ -21,10 +21,12 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+	@import "../theme.scss";
+
 	div {
-		color: goldenrod;
-		font-family: 'Bebas Neue', sans-serif;
+		color: $theme-font-primary;
+		font-family: $theme-item-font;
 		font-size: 2rem;
 	}
 	.flex-container {
@@ -35,16 +37,17 @@
 		margin-left: 1rem;
 	}
 	.bin {
-		font-family: 'Bebas Neue', sans-serif;
-		color: whitesmoke;
+		font-family: $theme-item-font;
+		color: $theme-font-can-activate;
 		background: none;
 		font-size: 2rem;
 		/* Stops button nudging out the list slightly on focus */
 		padding: 0px;
 		transition: color 200ms;
-	}
-	.bin:hover, .bin:focus {
-		color: crimson;
+		
+		:hover, :focus {
+			color: $theme-font-deletes;
+		}
 	}
 </style>
 
