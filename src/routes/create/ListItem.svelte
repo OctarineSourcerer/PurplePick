@@ -25,7 +25,7 @@
 	div {
 		color: goldenrod;
 		font-family: 'Bebas Neue', sans-serif;
-		font-size: 2em;
+		font-size: 2rem;
 	}
 	.flex-container {
 		display:flex;
@@ -35,7 +35,14 @@
 		margin-left: 1rem;
 	}
 	.bin {
-		color:crimson;
+		font-family: 'Bebas Neue', sans-serif;
+		color: goldenrod;
+		background: none;
+		font-size: 2rem;
+		transition: color 200ms;
+	}
+	.bin:hover, .bin:focus {
+		color: whitesmoke;
 	}
 </style>
 
@@ -46,6 +53,6 @@
 	{name}
 	{#if controls}
 		<!-- Button is likely to be more applicable here, also for accessibility purposes -->
-		<span class="item bin" on:click={bin}>bin</span>
+		<button class="item bin" on:click={bin}>bin</button>
 	{/if}
 </div>
