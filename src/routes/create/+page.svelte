@@ -1,5 +1,6 @@
 <script>
 	import ListItem from '../../components/ListItem.svelte';
+    import GoButton from '../../components/GoButton.svelte';
     export let data;
 </script>
 
@@ -9,4 +10,4 @@
     <ListItem name={name} />
 {/each}
 
-<button>Go!</button>
+<GoButton text="Go!" />
